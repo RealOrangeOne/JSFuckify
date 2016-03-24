@@ -4,6 +4,8 @@
   "description": "",
   "main": "lib/index.js",
   "scripts": {
+    "test": "browserify ./test/test.js -t ./lib/index.js -o ./test/out.js",
+    "lint": "eslint 'lib/'"
   },
   "author": "TheOrangeOne",
   "dependencies": {
