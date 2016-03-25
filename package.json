@@ -1,7 +1,7 @@
 {
   "name": "jsfuckify",
   "version": "0.0.0",
-  "description": "",
+  "description": "Browserify transformer and CLI to convert normal JS into JSFuck",
   "main": "lib/index.js",
   "scripts": {
     "postinstall": "npm run create-dirs",
@@ -13,6 +13,11 @@
     "coverage": "istanbul cover node_modules/.bin/_mocha -- --require scripts/test-helper.js --bail --recursive 'tests/*.js'",
     "mocha": "mocha --require scripts/test-helper.js --bail 'tests/**/*.js'"
   },
+  "keywords": [
+    "jsfuck",
+    "jscrewit",
+    "esoteric"
+  ],
   "bin": "./bin/cli.js",
   "author": "TheOrangeOne <git@theorangeone.net>",
   "dependencies": {
