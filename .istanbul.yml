@@ -1,0 +1,9 @@
+instrumentation:
+    root: .
+    extensions:
+        - .js
+    default-excludes: true
+    include-all-sources: true
+    excludes: ['tests/**']
+reporting:
+    print: both

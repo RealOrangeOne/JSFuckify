@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+
+set -e
+
+echo ">> Linting..."
+eslint 'lib/'
+
+
+echo ">> Testing Build..."
+browserify ./test/test.js -t ./lib/index.js -o ./test/out.js
+
+echo ">> Testing Project..."
+npm run coverage

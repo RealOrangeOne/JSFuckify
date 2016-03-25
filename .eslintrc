@@ -1,5 +1,11 @@
 {
   "extends": "./node_modules/eslint-config/.eslintrc",
   "parser": "babel-eslint",
-  "globals": { }
+  "globals": {
+    "before": true,
+    "beforeEach": true,
+    "describe": true,
+    "it": true,
+    "expect": true
+  }
 }

@@ -4,9 +4,11 @@
   "description": "",
   "main": "lib/index.js",
   "scripts": {
-    "build": "browserify ./lib/cli.js -o ./test/out.js",
-    "test": "browserify ./test/test.js -t ./lib/index.js -o ./test/out.js",
-    "lint": "eslint 'lib/'"
+    "build-cli": "browserify ./lib/cli.js -o ./bin/cli.js",
+    "test": "./scripts/runtests",
+    "lint": "eslint 'lib/'",
+    "coverage": "istanbul cover node_modules/.bin/_mocha -- --require scripts/test-helper.js --bail --recursive 'tests/**/*.js'",
+    "mocha": "mocha --require scripts/test-helper.js --bail 'tests/**/*.js'"
   },
   "bin": "./bin/cli.js",
   "author": "TheOrangeOne <git@theorangeone.net>",
