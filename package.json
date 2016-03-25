@@ -25,6 +25,7 @@
     "jscrewit": "=1.10.1"
   },
   "devDependencies": {
+    "babel-eslint": "=5.0.0",
     "browserify": "=13.0.0",
     "chai": "=3.5.0",
     "eslint": "=1.5.0",
