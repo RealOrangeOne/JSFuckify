@@ -6,8 +6,8 @@ echo ">> Linting..."
 eslint 'lib/'
 
 
-# echo ">> Testing Build..."
-# npm run test-build
+echo ">> Testing Build..."
+npm run test-build
 
 echo ">> Testing Project..."
 npm run coverage
