@@ -4,10 +4,13 @@
   "description": "",
   "main": "lib/index.js",
   "scripts": {
+    "postinstall": "npm run create-dirs",
+    "create-dirs": "mkdir -p bin/ tests/out",
     "build-cli": "browserify ./lib/cli.js -o ./bin/cli.js",
     "test": "./scripts/runtests",
     "lint": "eslint 'lib/'",
-    "coverage": "istanbul cover node_modules/.bin/_mocha -- --require scripts/test-helper.js --bail --recursive 'tests/**/*.js'",
+    "test-build": "browserify tests/build-test.js -t ./lib/index.js -o tests/out/build-test.js",
+    "coverage": "istanbul cover node_modules/.bin/_mocha -- --require scripts/test-helper.js --bail --recursive 'tests/*.js'",
     "mocha": "mocha --require scripts/test-helper.js --bail 'tests/**/*.js'"
   },
   "bin": "./bin/cli.js",
